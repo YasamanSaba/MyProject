@@ -16,6 +16,8 @@
 		F2951C252507990A00B9EFE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2951C232507990A00B9EFE3 /* LaunchScreen.storyboard */; };
 		F2951C302507990B00B9EFE3 /* MylivnTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2951C2F2507990B00B9EFE3 /* MylivnTests.swift */; };
 		F2951C3B2507990B00B9EFE3 /* MylivnUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2951C3A2507990B00B9EFE3 /* MylivnUITests.swift */; };
+		F2951C5525079D9200B9EFE3 /* Character+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2951C5125079D9200B9EFE3 /* Character+CoreDataClass.swift */; };
+		F2951C5725079D9200B9EFE3 /* Comic+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2951C5325079D9200B9EFE3 /* Comic+CoreDataClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		F2951C362507990B00B9EFE3 /* MylivnUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MylivnUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2951C3A2507990B00B9EFE3 /* MylivnUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MylivnUITests.swift; sourceTree = "<group>"; };
 		F2951C3C2507990B00B9EFE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2951C5125079D9200B9EFE3 /* Character+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Character+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F2951C5325079D9200B9EFE3 /* Comic+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Comic+CoreDataClass.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 		F2951C142507990300B9EFE3 /* Mylivn */ = {
 			isa = PBXGroup;
 			children = (
+				F2951C4825079D0000B9EFE3 /* Model */,
 				F2951C152507990300B9EFE3 /* AppDelegate.swift */,
 				F2951C172507990300B9EFE3 /* SceneDelegate.swift */,
 				F2951C192507990300B9EFE3 /* ViewController.swift */,
@@ -108,7 +113,6 @@
 				F2951C212507990A00B9EFE3 /* Assets.xcassets */,
 				F2951C232507990A00B9EFE3 /* LaunchScreen.storyboard */,
 				F2951C262507990A00B9EFE3 /* Info.plist */,
-				F2951C1E2507990300B9EFE3 /* Mylivn.xcdatamodeld */,
 			);
 			path = Mylivn;
 			sourceTree = "<group>";
@@ -129,6 +133,16 @@
 				F2951C3C2507990B00B9EFE3 /* Info.plist */,
 			);
 			path = MylivnUITests;
+			sourceTree = "<group>";
+		};
+		F2951C4825079D0000B9EFE3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F2951C5125079D9200B9EFE3 /* Character+CoreDataClass.swift */,
+				F2951C5325079D9200B9EFE3 /* Comic+CoreDataClass.swift */,
+				F2951C1E2507990300B9EFE3 /* Mylivn.xcdatamodeld */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,9 +277,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2951C1A2507990300B9EFE3 /* ViewController.swift in Sources */,
+				F2951C5725079D9200B9EFE3 /* Comic+CoreDataClass.swift in Sources */,
 				F2951C162507990300B9EFE3 /* AppDelegate.swift in Sources */,
 				F2951C202507990300B9EFE3 /* Mylivn.xcdatamodeld in Sources */,
 				F2951C182507990300B9EFE3 /* SceneDelegate.swift in Sources */,
+				F2951C5525079D9200B9EFE3 /* Character+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,7 +464,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.dreamcatcher.Mylivn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -466,7 +482,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.dreamcatcher.Mylivn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
