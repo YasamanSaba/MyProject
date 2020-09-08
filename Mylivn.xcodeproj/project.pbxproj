@@ -1,0 +1,612 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F2951C162507990300B9EFE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2951C152507990300B9EFE3 /* AppDelegate.swift */; };
+		F2951C182507990300B9EFE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2951C172507990300B9EFE3 /* SceneDelegate.swift */; };
+		F2951C1A2507990300B9EFE3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2951C192507990300B9EFE3 /* ViewController.swift */; };
+		F2951C1D2507990300B9EFE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2951C1B2507990300B9EFE3 /* Main.storyboard */; };
+		F2951C202507990300B9EFE3 /* Mylivn.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F2951C1E2507990300B9EFE3 /* Mylivn.xcdatamodeld */; };
+		F2951C222507990A00B9EFE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2951C212507990A00B9EFE3 /* Assets.xcassets */; };
+		F2951C252507990A00B9EFE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2951C232507990A00B9EFE3 /* LaunchScreen.storyboard */; };
+		F2951C302507990B00B9EFE3 /* MylivnTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2951C2F2507990B00B9EFE3 /* MylivnTests.swift */; };
+		F2951C3B2507990B00B9EFE3 /* MylivnUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2951C3A2507990B00B9EFE3 /* MylivnUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F2951C2C2507990A00B9EFE3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2951C0A2507990300B9EFE3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F2951C112507990300B9EFE3;
+			remoteInfo = Mylivn;
+		};
+		F2951C372507990B00B9EFE3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2951C0A2507990300B9EFE3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F2951C112507990300B9EFE3;
+			remoteInfo = Mylivn;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F2951C122507990300B9EFE3 /* Mylivn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mylivn.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2951C152507990300B9EFE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F2951C172507990300B9EFE3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F2951C192507990300B9EFE3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F2951C1C2507990300B9EFE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F2951C1F2507990300B9EFE3 /* Mylivn.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mylivn.xcdatamodel; sourceTree = "<group>"; };
+		F2951C212507990A00B9EFE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F2951C242507990A00B9EFE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F2951C262507990A00B9EFE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2951C2B2507990A00B9EFE3 /* MylivnTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MylivnTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2951C2F2507990B00B9EFE3 /* MylivnTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MylivnTests.swift; sourceTree = "<group>"; };
+		F2951C312507990B00B9EFE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2951C362507990B00B9EFE3 /* MylivnUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MylivnUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2951C3A2507990B00B9EFE3 /* MylivnUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MylivnUITests.swift; sourceTree = "<group>"; };
+		F2951C3C2507990B00B9EFE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F2951C0F2507990300B9EFE3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2951C282507990A00B9EFE3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2951C332507990B00B9EFE3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F2951C092507990300B9EFE3 = {
+			isa = PBXGroup;
+			children = (
+				F2951C142507990300B9EFE3 /* Mylivn */,
+				F2951C2E2507990B00B9EFE3 /* MylivnTests */,
+				F2951C392507990B00B9EFE3 /* MylivnUITests */,
+				F2951C132507990300B9EFE3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F2951C132507990300B9EFE3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F2951C122507990300B9EFE3 /* Mylivn.app */,
+				F2951C2B2507990A00B9EFE3 /* MylivnTests.xctest */,
+				F2951C362507990B00B9EFE3 /* MylivnUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F2951C142507990300B9EFE3 /* Mylivn */ = {
+			isa = PBXGroup;
+			children = (
+				F2951C152507990300B9EFE3 /* AppDelegate.swift */,
+				F2951C172507990300B9EFE3 /* SceneDelegate.swift */,
+				F2951C192507990300B9EFE3 /* ViewController.swift */,
+				F2951C1B2507990300B9EFE3 /* Main.storyboard */,
+				F2951C212507990A00B9EFE3 /* Assets.xcassets */,
+				F2951C232507990A00B9EFE3 /* LaunchScreen.storyboard */,
+				F2951C262507990A00B9EFE3 /* Info.plist */,
+				F2951C1E2507990300B9EFE3 /* Mylivn.xcdatamodeld */,
+			);
+			path = Mylivn;
+			sourceTree = "<group>";
+		};
+		F2951C2E2507990B00B9EFE3 /* MylivnTests */ = {
+			isa = PBXGroup;
+			children = (
+				F2951C2F2507990B00B9EFE3 /* MylivnTests.swift */,
+				F2951C312507990B00B9EFE3 /* Info.plist */,
+			);
+			path = MylivnTests;
+			sourceTree = "<group>";
+		};
+		F2951C392507990B00B9EFE3 /* MylivnUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F2951C3A2507990B00B9EFE3 /* MylivnUITests.swift */,
+				F2951C3C2507990B00B9EFE3 /* Info.plist */,
+			);
+			path = MylivnUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F2951C112507990300B9EFE3 /* Mylivn */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2951C3F2507990B00B9EFE3 /* Build configuration list for PBXNativeTarget "Mylivn" */;
+			buildPhases = (
+				F2951C0E2507990300B9EFE3 /* Sources */,
+				F2951C0F2507990300B9EFE3 /* Frameworks */,
+				F2951C102507990300B9EFE3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Mylivn;
+			productName = Mylivn;
+			productReference = F2951C122507990300B9EFE3 /* Mylivn.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F2951C2A2507990A00B9EFE3 /* MylivnTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2951C422507990B00B9EFE3 /* Build configuration list for PBXNativeTarget "MylivnTests" */;
+			buildPhases = (
+				F2951C272507990A00B9EFE3 /* Sources */,
+				F2951C282507990A00B9EFE3 /* Frameworks */,
+				F2951C292507990A00B9EFE3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F2951C2D2507990A00B9EFE3 /* PBXTargetDependency */,
+			);
+			name = MylivnTests;
+			productName = MylivnTests;
+			productReference = F2951C2B2507990A00B9EFE3 /* MylivnTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F2951C352507990B00B9EFE3 /* MylivnUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2951C452507990B00B9EFE3 /* Build configuration list for PBXNativeTarget "MylivnUITests" */;
+			buildPhases = (
+				F2951C322507990B00B9EFE3 /* Sources */,
+				F2951C332507990B00B9EFE3 /* Frameworks */,
+				F2951C342507990B00B9EFE3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F2951C382507990B00B9EFE3 /* PBXTargetDependency */,
+			);
+			name = MylivnUITests;
+			productName = MylivnUITests;
+			productReference = F2951C362507990B00B9EFE3 /* MylivnUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F2951C0A2507990300B9EFE3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "Dream Catcher";
+				TargetAttributes = {
+					F2951C112507990300B9EFE3 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					F2951C2A2507990A00B9EFE3 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = F2951C112507990300B9EFE3;
+					};
+					F2951C352507990B00B9EFE3 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = F2951C112507990300B9EFE3;
+					};
+				};
+			};
+			buildConfigurationList = F2951C0D2507990300B9EFE3 /* Build configuration list for PBXProject "Mylivn" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F2951C092507990300B9EFE3;
+			productRefGroup = F2951C132507990300B9EFE3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F2951C112507990300B9EFE3 /* Mylivn */,
+				F2951C2A2507990A00B9EFE3 /* MylivnTests */,
+				F2951C352507990B00B9EFE3 /* MylivnUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F2951C102507990300B9EFE3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2951C252507990A00B9EFE3 /* LaunchScreen.storyboard in Resources */,
+				F2951C222507990A00B9EFE3 /* Assets.xcassets in Resources */,
+				F2951C1D2507990300B9EFE3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2951C292507990A00B9EFE3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2951C342507990B00B9EFE3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F2951C0E2507990300B9EFE3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2951C1A2507990300B9EFE3 /* ViewController.swift in Sources */,
+				F2951C162507990300B9EFE3 /* AppDelegate.swift in Sources */,
+				F2951C202507990300B9EFE3 /* Mylivn.xcdatamodeld in Sources */,
+				F2951C182507990300B9EFE3 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2951C272507990A00B9EFE3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2951C302507990B00B9EFE3 /* MylivnTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2951C322507990B00B9EFE3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2951C3B2507990B00B9EFE3 /* MylivnUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F2951C2D2507990A00B9EFE3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F2951C112507990300B9EFE3 /* Mylivn */;
+			targetProxy = F2951C2C2507990A00B9EFE3 /* PBXContainerItemProxy */;
+		};
+		F2951C382507990B00B9EFE3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F2951C112507990300B9EFE3 /* Mylivn */;
+			targetProxy = F2951C372507990B00B9EFE3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F2951C1B2507990300B9EFE3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2951C1C2507990300B9EFE3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F2951C232507990A00B9EFE3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2951C242507990A00B9EFE3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F2951C3D2507990B00B9EFE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F2951C3E2507990B00B9EFE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F2951C402507990B00B9EFE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8W28R8275P;
+				INFOPLIST_FILE = Mylivn/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dreamcatcher.Mylivn;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F2951C412507990B00B9EFE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8W28R8275P;
+				INFOPLIST_FILE = Mylivn/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dreamcatcher.Mylivn;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F2951C432507990B00B9EFE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8W28R8275P;
+				INFOPLIST_FILE = MylivnTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dreamcatcher.MylivnTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mylivn.app/Mylivn";
+			};
+			name = Debug;
+		};
+		F2951C442507990B00B9EFE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8W28R8275P;
+				INFOPLIST_FILE = MylivnTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dreamcatcher.MylivnTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mylivn.app/Mylivn";
+			};
+			name = Release;
+		};
+		F2951C462507990B00B9EFE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8W28R8275P;
+				INFOPLIST_FILE = MylivnUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dreamcatcher.MylivnUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Mylivn;
+			};
+			name = Debug;
+		};
+		F2951C472507990B00B9EFE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8W28R8275P;
+				INFOPLIST_FILE = MylivnUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dreamcatcher.MylivnUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Mylivn;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F2951C0D2507990300B9EFE3 /* Build configuration list for PBXProject "Mylivn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2951C3D2507990B00B9EFE3 /* Debug */,
+				F2951C3E2507990B00B9EFE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2951C3F2507990B00B9EFE3 /* Build configuration list for PBXNativeTarget "Mylivn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2951C402507990B00B9EFE3 /* Debug */,
+				F2951C412507990B00B9EFE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2951C422507990B00B9EFE3 /* Build configuration list for PBXNativeTarget "MylivnTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2951C432507990B00B9EFE3 /* Debug */,
+				F2951C442507990B00B9EFE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2951C452507990B00B9EFE3 /* Build configuration list for PBXNativeTarget "MylivnUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2951C462507990B00B9EFE3 /* Debug */,
+				F2951C472507990B00B9EFE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F2951C1E2507990300B9EFE3 /* Mylivn.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F2951C1F2507990300B9EFE3 /* Mylivn.xcdatamodel */,
+			);
+			currentVersion = F2951C1F2507990300B9EFE3 /* Mylivn.xcdatamodel */;
+			path = Mylivn.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F2951C0A2507990300B9EFE3 /* Project object */;
+}
