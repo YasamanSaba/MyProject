@@ -6,6 +6,13 @@
         <attribute name="name" attributeType="String"/>
         <relationship name="comics" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Comic" inverseName="characters" inverseEntity="Comic"/>
     </entity>
+    <entity name="CharacterResult" representedClassName="CharacterResult" syncable="YES" codeGenerationType="category">
+        <attribute name="count" attributeType="Integer 32" usesScalarValueType="YES"/>
+        <attribute name="limit" attributeType="Integer 32" usesScalarValueType="YES"/>
+        <attribute name="offset" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="total" attributeType="Integer 32" usesScalarValueType="YES"/>
+        <relationship name="characters" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Character"/>
+    </entity>
     <entity name="Comic" representedClassName="Comic" syncable="YES" codeGenerationType="category">
         <attribute name="desc" attributeType="String"/>
         <attribute name="id" attributeType="Integer 64" usesScalarValueType="YES"/>
@@ -14,7 +21,8 @@
         <relationship name="characters" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Character" inverseName="comics" inverseEntity="Character"/>
     </entity>
     <elements>
-        <element name="Character" positionX="-63" positionY="-18" width="128" height="103"/>
+        <element name="Character" positionX="-385.046875" positionY="-42.07421875" width="128" height="103"/>
         <element name="Comic" positionX="-54" positionY="18" width="128" height="118"/>
+        <element name="CharacterResult" positionX="-185.01171875" positionY="180.8125" width="128" height="118"/>
     </elements>
 </model>

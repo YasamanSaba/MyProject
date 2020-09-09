@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F27CE6002508A33800B402CE /* CharactersTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27CE5FF2508A33800B402CE /* CharactersTest.swift */; };
+		F27CE6032508A3E000B402CE /* InMemoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27CE6022508A3E000B402CE /* InMemoryStore.swift */; };
+		F27CE6092508A66000B402CE /* Comics.json in Resources */ = {isa = PBXBuildFile; fileRef = F27CE6082508A66000B402CE /* Comics.json */; };
 		F2951C162507990300B9EFE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2951C152507990300B9EFE3 /* AppDelegate.swift */; };
 		F2951C182507990300B9EFE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2951C172507990300B9EFE3 /* SceneDelegate.swift */; };
 		F2951C1A2507990300B9EFE3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2951C192507990300B9EFE3 /* ViewController.swift */; };
@@ -18,6 +21,10 @@
 		F2951C3B2507990B00B9EFE3 /* MylivnUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2951C3A2507990B00B9EFE3 /* MylivnUITests.swift */; };
 		F2951C5525079D9200B9EFE3 /* Character+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2951C5125079D9200B9EFE3 /* Character+CoreDataClass.swift */; };
 		F2951C5725079D9200B9EFE3 /* Comic+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2951C5325079D9200B9EFE3 /* Comic+CoreDataClass.swift */; };
+		F2C919532508E32400B65FDE /* CharacterServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C919522508E32400B65FDE /* CharacterServiceType.swift */; };
+		F2C919552508E34500B65FDE /* CharacterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C919542508E34500B65FDE /* CharacterService.swift */; };
+		F2D4C5602508B4FF00899CDE /* CharacterResult+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D4C55E2508B4FF00899CDE /* CharacterResult+CoreDataClass.swift */; };
+		F2D4C5652508C38B00899CDE /* Characters.json in Resources */ = {isa = PBXBuildFile; fileRef = F27CE6062508A63400B402CE /* Characters.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +45,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F27CE5FF2508A33800B402CE /* CharactersTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersTest.swift; sourceTree = "<group>"; };
+		F27CE6022508A3E000B402CE /* InMemoryStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InMemoryStore.swift; sourceTree = "<group>"; };
+		F27CE6062508A63400B402CE /* Characters.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Characters.json; sourceTree = "<group>"; };
+		F27CE6082508A66000B402CE /* Comics.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Comics.json; sourceTree = "<group>"; };
 		F2951C122507990300B9EFE3 /* Mylivn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mylivn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2951C152507990300B9EFE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2951C172507990300B9EFE3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +66,9 @@
 		F2951C3C2507990B00B9EFE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2951C5125079D9200B9EFE3 /* Character+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Character+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F2951C5325079D9200B9EFE3 /* Comic+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Comic+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F2C919522508E32400B65FDE /* CharacterServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterServiceType.swift; sourceTree = "<group>"; };
+		F2C919542508E34500B65FDE /* CharacterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterService.swift; sourceTree = "<group>"; };
+		F2D4C55E2508B4FF00899CDE /* CharacterResult+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterResult+CoreDataClass.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +96,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F27CE6012508A33E00B402CE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F27CE6022508A3E000B402CE /* InMemoryStore.swift */,
+				F27CE5FF2508A33800B402CE /* CharactersTest.swift */,
+				F27CE6062508A63400B402CE /* Characters.json */,
+				F27CE6082508A66000B402CE /* Comics.json */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F2951C092507990300B9EFE3 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +130,7 @@
 		F2951C142507990300B9EFE3 /* Mylivn */ = {
 			isa = PBXGroup;
 			children = (
+				F2C919512508E30000B65FDE /* Service */,
 				F2951C4825079D0000B9EFE3 /* Model */,
 				F2951C152507990300B9EFE3 /* AppDelegate.swift */,
 				F2951C172507990300B9EFE3 /* SceneDelegate.swift */,
@@ -120,6 +146,7 @@
 		F2951C2E2507990B00B9EFE3 /* MylivnTests */ = {
 			isa = PBXGroup;
 			children = (
+				F27CE6012508A33E00B402CE /* Model */,
 				F2951C2F2507990B00B9EFE3 /* MylivnTests.swift */,
 				F2951C312507990B00B9EFE3 /* Info.plist */,
 			);
@@ -138,11 +165,21 @@
 		F2951C4825079D0000B9EFE3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F2D4C55E2508B4FF00899CDE /* CharacterResult+CoreDataClass.swift */,
 				F2951C5125079D9200B9EFE3 /* Character+CoreDataClass.swift */,
 				F2951C5325079D9200B9EFE3 /* Comic+CoreDataClass.swift */,
 				F2951C1E2507990300B9EFE3 /* Mylivn.xcdatamodeld */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F2C919512508E30000B65FDE /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				F2C919522508E32400B65FDE /* CharacterServiceType.swift */,
+				F2C919542508E34500B65FDE /* CharacterService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +296,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F27CE6092508A66000B402CE /* Comics.json in Resources */,
+				F2D4C5652508C38B00899CDE /* Characters.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,7 +318,10 @@
 				F2951C1A2507990300B9EFE3 /* ViewController.swift in Sources */,
 				F2951C5725079D9200B9EFE3 /* Comic+CoreDataClass.swift in Sources */,
 				F2951C162507990300B9EFE3 /* AppDelegate.swift in Sources */,
+				F2D4C5602508B4FF00899CDE /* CharacterResult+CoreDataClass.swift in Sources */,
 				F2951C202507990300B9EFE3 /* Mylivn.xcdatamodeld in Sources */,
+				F2C919532508E32400B65FDE /* CharacterServiceType.swift in Sources */,
+				F2C919552508E34500B65FDE /* CharacterService.swift in Sources */,
 				F2951C182507990300B9EFE3 /* SceneDelegate.swift in Sources */,
 				F2951C5525079D9200B9EFE3 /* Character+CoreDataClass.swift in Sources */,
 			);
@@ -290,6 +332,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2951C302507990B00B9EFE3 /* MylivnTests.swift in Sources */,
+				F27CE6032508A3E000B402CE /* InMemoryStore.swift in Sources */,
+				F27CE6002508A33800B402CE /* CharactersTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
