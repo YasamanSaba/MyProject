@@ -8,6 +8,7 @@
     </entity>
     <entity name="CharacterResult" representedClassName="CharacterResult" syncable="YES" codeGenerationType="category">
         <attribute name="count" attributeType="Integer 32" usesScalarValueType="YES"/>
+        <attribute name="fetchDate" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="limit" attributeType="Integer 32" usesScalarValueType="YES"/>
         <attribute name="offset" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="total" attributeType="Integer 32" usesScalarValueType="YES"/>
@@ -22,7 +23,7 @@
     </entity>
     <elements>
         <element name="Character" positionX="-385.046875" positionY="-42.07421875" width="128" height="103"/>
+        <element name="CharacterResult" positionX="-185.01171875" positionY="180.8125" width="128" height="133"/>
         <element name="Comic" positionX="-54" positionY="18" width="128" height="118"/>
-        <element name="CharacterResult" positionX="-185.01171875" positionY="180.8125" width="128" height="118"/>
     </elements>
 </model>

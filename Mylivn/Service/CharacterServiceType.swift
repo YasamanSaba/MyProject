@@ -9,5 +9,5 @@
 import Foundation
 
 protocol CharacterServiceType {
-    
+    func characters(for page: Int, handler: @escaping ([Character]) -> Void) throws
 }

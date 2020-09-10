@@ -40,7 +40,8 @@ class CharactersTest: XCTestCase {
         let data = try! Data(contentsOf: fileUrl!)
         let decoder = JSONDecoder()
         decoder.userInfo[CodingUserInfoKey.context!] = context
-        _ = try? decoder.decode(CharacterResult.self, from: data)
+        let result = try? decoder.decode(CharacterResult.self, from: data)
+        result?.fetchDate = Date()
         XCTAssertNoThrow(try self.context.save())
         let characterRequest = NSFetchRequest<NSNumber>(entityName: "Character")
         characterRequest.resultType = .countResultType
