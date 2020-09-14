@@ -23,6 +23,11 @@
 		F2951C3B2507990B00B9EFE3 /* MylivnUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2951C3A2507990B00B9EFE3 /* MylivnUITests.swift */; };
 		F2951C5525079D9200B9EFE3 /* Character+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2951C5125079D9200B9EFE3 /* Character+CoreDataClass.swift */; };
 		F2951C5725079D9200B9EFE3 /* Comic+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2951C5325079D9200B9EFE3 /* Comic+CoreDataClass.swift */; };
+		F2B218B0250DE8E8007CB48F /* ComicResult+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B218AE250DE8E8007CB48F /* ComicResult+CoreDataClass.swift */; };
+		F2B218B3250DED67007CB48F /* ComicsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B218B2250DED67007CB48F /* ComicsTest.swift */; };
+		F2B218B5250DF2A3007CB48F /* ComicServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B218B4250DF2A3007CB48F /* ComicServiceType.swift */; };
+		F2B218B7250DF2C5007CB48F /* ComicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B218B6250DF2C5007CB48F /* ComicService.swift */; };
+		F2B218B9250E0B28007CB48F /* ComicServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B218B8250E0B28007CB48F /* ComicServiceTest.swift */; };
 		F2C919532508E32400B65FDE /* CharacterServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C919522508E32400B65FDE /* CharacterServiceType.swift */; };
 		F2C919552508E34500B65FDE /* CharacterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C919542508E34500B65FDE /* CharacterService.swift */; };
 		F2D4C5602508B4FF00899CDE /* CharacterResult+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D4C55E2508B4FF00899CDE /* CharacterResult+CoreDataClass.swift */; };
@@ -70,6 +75,11 @@
 		F2951C3C2507990B00B9EFE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2951C5125079D9200B9EFE3 /* Character+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Character+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F2951C5325079D9200B9EFE3 /* Comic+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Comic+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F2B218AE250DE8E8007CB48F /* ComicResult+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ComicResult+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F2B218B2250DED67007CB48F /* ComicsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsTest.swift; sourceTree = "<group>"; };
+		F2B218B4250DF2A3007CB48F /* ComicServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicServiceType.swift; sourceTree = "<group>"; };
+		F2B218B6250DF2C5007CB48F /* ComicService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicService.swift; sourceTree = "<group>"; };
+		F2B218B8250E0B28007CB48F /* ComicServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicServiceTest.swift; sourceTree = "<group>"; };
 		F2C919522508E32400B65FDE /* CharacterServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterServiceType.swift; sourceTree = "<group>"; };
 		F2C919542508E34500B65FDE /* CharacterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterService.swift; sourceTree = "<group>"; };
 		F2D4C55E2508B4FF00899CDE /* CharacterResult+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterResult+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -105,6 +115,7 @@
 			children = (
 				F25A8A5C250A084F00E28386 /* AuthenticationTest.swift */,
 				F25A8A60250A147F00E28386 /* CharacterServiceTest.swift */,
+				F2B218B8250E0B28007CB48F /* ComicServiceTest.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -114,6 +125,7 @@
 			children = (
 				F27CE6022508A3E000B402CE /* InMemoryStore.swift */,
 				F27CE5FF2508A33800B402CE /* CharactersTest.swift */,
+				F2B218B2250DED67007CB48F /* ComicsTest.swift */,
 				F27CE6062508A63400B402CE /* Characters.json */,
 				F27CE6082508A66000B402CE /* Comics.json */,
 			);
@@ -178,6 +190,7 @@
 		F2951C4825079D0000B9EFE3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F2B218AE250DE8E8007CB48F /* ComicResult+CoreDataClass.swift */,
 				F2D4C55E2508B4FF00899CDE /* CharacterResult+CoreDataClass.swift */,
 				F2951C5125079D9200B9EFE3 /* Character+CoreDataClass.swift */,
 				F2951C5325079D9200B9EFE3 /* Comic+CoreDataClass.swift */,
@@ -192,6 +205,8 @@
 				F2C919522508E32400B65FDE /* CharacterServiceType.swift */,
 				F2C919542508E34500B65FDE /* CharacterService.swift */,
 				F25A8A59250A00F400E28386 /* Authentication.swift */,
+				F2B218B4250DF2A3007CB48F /* ComicServiceType.swift */,
+				F2B218B6250DF2C5007CB48F /* ComicService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -331,10 +346,13 @@
 			files = (
 				F2951C1A2507990300B9EFE3 /* ViewController.swift in Sources */,
 				F2951C5725079D9200B9EFE3 /* Comic+CoreDataClass.swift in Sources */,
+				F2B218B0250DE8E8007CB48F /* ComicResult+CoreDataClass.swift in Sources */,
 				F2951C162507990300B9EFE3 /* AppDelegate.swift in Sources */,
 				F25A8A5A250A00F400E28386 /* Authentication.swift in Sources */,
+				F2B218B7250DF2C5007CB48F /* ComicService.swift in Sources */,
 				F2D4C5602508B4FF00899CDE /* CharacterResult+CoreDataClass.swift in Sources */,
 				F2951C202507990300B9EFE3 /* Mylivn.xcdatamodeld in Sources */,
+				F2B218B5250DF2A3007CB48F /* ComicServiceType.swift in Sources */,
 				F2C919532508E32400B65FDE /* CharacterServiceType.swift in Sources */,
 				F2C919552508E34500B65FDE /* CharacterService.swift in Sources */,
 				F2951C182507990300B9EFE3 /* SceneDelegate.swift in Sources */,
@@ -346,6 +364,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2B218B3250DED67007CB48F /* ComicsTest.swift in Sources */,
+				F2B218B9250E0B28007CB48F /* ComicServiceTest.swift in Sources */,
 				F25A8A61250A147F00E28386 /* CharacterServiceTest.swift in Sources */,
 				F27CE6032508A3E000B402CE /* InMemoryStore.swift in Sources */,
 				F27CE6002508A33800B402CE /* CharactersTest.swift in Sources */,

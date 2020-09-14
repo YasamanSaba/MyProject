@@ -11,11 +11,12 @@ import CoreData
 
 struct CharacterService: CharacterServiceType {
     
-    private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    private let context: NSManagedObjectContext
     private let authenticationService: Authentication
     
-    init(authentication: Authentication) {
+    init(authentication: Authentication, context: NSManagedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext) {
         self.authenticationService = authentication
+        self.context = context
     }
     
     private func today() -> Date {
@@ -55,7 +56,11 @@ struct CharacterService: CharacterServiceType {
                 } else {
                     result.fetchDate = self.today()
                     try self.context.save()
-                    handler(Array(_immutableCocoaArray: result.characters!))
+                    var characterList: [Character] = []
+                    result.characters?.forEach{
+                        characterList.append($0 as! Character)
+                    }
+                    handler(characterList)
                 }
             } catch {
                 handler([])

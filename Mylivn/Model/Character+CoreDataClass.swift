@@ -24,12 +24,12 @@ public class Character: NSManagedObject, Codable {
         let path: String
         let fileExtension: String
         
-        private enum ThumbnailKeys: String, CodingKey {
+    private enum ThumbnailKeys: String, CodingKey {
             case path
             case fileExtension = "extension"
         }
         
-        public init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
             let container = try decoder.container(keyedBy: ThumbnailKeys.self)
             path = try container.decode(String.self, forKey: .path)
             fileExtension = try container.decode(String.self, forKey: .fileExtension)

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19E287" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19G2021" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Character" representedClassName="Character" syncable="YES" codeGenerationType="category">
         <attribute name="id" attributeType="Integer 64" usesScalarValueType="YES"/>
         <attribute name="img" attributeType="URI"/>
         <attribute name="name" attributeType="String"/>
-        <relationship name="comics" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Comic" inverseName="characters" inverseEntity="Comic"/>
+        <relationship name="comicResult" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ComicResult" inverseName="character" inverseEntity="ComicResult"/>
     </entity>
     <entity name="CharacterResult" representedClassName="CharacterResult" syncable="YES" codeGenerationType="category">
         <attribute name="count" attributeType="Integer 32" usesScalarValueType="YES"/>
@@ -12,18 +12,27 @@
         <attribute name="limit" attributeType="Integer 32" usesScalarValueType="YES"/>
         <attribute name="offset" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="total" attributeType="Integer 32" usesScalarValueType="YES"/>
-        <relationship name="characters" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Character"/>
+        <relationship name="characters" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Character"/>
     </entity>
     <entity name="Comic" representedClassName="Comic" syncable="YES" codeGenerationType="category">
-        <attribute name="desc" attributeType="String"/>
+        <attribute name="desc" optional="YES" attributeType="String"/>
         <attribute name="id" attributeType="Integer 64" usesScalarValueType="YES"/>
-        <attribute name="img" attributeType="URI"/>
-        <attribute name="title" attributeType="String"/>
-        <relationship name="characters" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Character" inverseName="comics" inverseEntity="Character"/>
+        <attribute name="img" optional="YES" attributeType="URI"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="ComicResult" representedClassName="ComicResult" syncable="YES" codeGenerationType="category">
+        <attribute name="count" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="fetchDate" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="limit" attributeType="Integer 32" usesScalarValueType="YES"/>
+        <attribute name="offset" attributeType="Integer 32" usesScalarValueType="YES"/>
+        <attribute name="total" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="character" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Character" inverseName="comicResult" inverseEntity="Character"/>
+        <relationship name="comics" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Comic"/>
     </entity>
     <elements>
         <element name="Character" positionX="-385.046875" positionY="-42.07421875" width="128" height="103"/>
-        <element name="CharacterResult" positionX="-185.01171875" positionY="180.8125" width="128" height="133"/>
-        <element name="Comic" positionX="-54" positionY="18" width="128" height="118"/>
+        <element name="CharacterResult" positionX="-353.5859375" positionY="-284.2578125" width="128" height="133"/>
+        <element name="Comic" positionX="12.859375" positionY="-184.10546875" width="128" height="103"/>
+        <element name="ComicResult" positionX="-150.07421875" positionY="-119.87890625" width="128" height="148"/>
     </elements>
 </model>
