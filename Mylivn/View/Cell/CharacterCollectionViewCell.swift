@@ -13,11 +13,16 @@ class CharacterCollectionViewCell: UICollectionViewCell {
     private var img: UIImageView!
     private var lblName: UILabel!
     
-    func configure(image: UIImage, name: String) {
+    func configure(image: URL, name: String) {
         img = UIImageView()
-        img.image = image
         img.layer.masksToBounds = true
         img.layer.cornerRadius = 5
+        URLSession.shared.dataTask(with: image) { [weak self] data, response, error in
+            guard let self = self, let response = response as? HTTPURLResponse, (200..<300).contains(response.statusCode), let data = data, let fetchedImage = UIImage(data: data) else { return }
+            DispatchQueue.main.async {
+                self.img.image = fetchedImage
+            }
+        }.resume()
         lblName = UILabel()
         lblName.text = name
         lblName.font = UIFont.preferredFont(forTextStyle: .callout)
@@ -40,7 +45,8 @@ class CharacterCollectionViewCell: UICollectionViewCell {
     }
     
     override func prepareForReuse() {
-        img = nil
-        lblName = nil
+        super.prepareForReuse()
+        img?.image = nil
+        lblName?.text = nil
     }
 }

@@ -46,7 +46,7 @@ public class Character: NSManagedObject, Codable {
         id = try container.decode(Int64.self, forKey: .id)
         let thumbnail = try container.decode(Thumbnail.self, forKey: .img)
         let path = thumbnail.path + "." + thumbnail.fileExtension
-        img = URL(fileURLWithPath: path)
+        img = URL(string: path)
     }
 }
 

@@ -2,7 +2,7 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19G2021" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Character" representedClassName="Character" syncable="YES" codeGenerationType="category">
         <attribute name="id" attributeType="Integer 64" usesScalarValueType="YES"/>
-        <attribute name="img" attributeType="URI"/>
+        <attribute name="img" attributeType="URI" allowsExternalBinaryDataStorage="YES"/>
         <attribute name="name" attributeType="String"/>
         <relationship name="comicResult" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ComicResult" inverseName="character" inverseEntity="ComicResult"/>
     </entity>

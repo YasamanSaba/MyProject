@@ -56,14 +56,7 @@ extension ViewModel: CharacterServiceDelegateProtocol {
             self.characterDataSource = CharacterDataSource(collectionView: collectionView) {
                 (collectionView: UICollectionView, indexPath: IndexPath, character: Character) -> UICollectionViewCell? in
                 guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CharacterCollectionViewCell.reuseId, for: indexPath) as? CharacterCollectionViewCell else { return nil }
-                let https = "https" + character.img!.path.dropFirst(5)
-                let task = URLSession.shared.dataTask(with: URL(string: https)!) { data, response, error in
-                    guard let response = response as? HTTPURLResponse, (200..<300).contains(response.statusCode), let data = data, let image = UIImage(data: data) else { return }
-                    DispatchQueue.main.async {
-                        cell.configure(image: image, name: character.name!)
-                    }
-                }
-                task.resume()
+                cell.configure(image: character.img!, name: character.name!)
                 return cell
             }
         } else {
