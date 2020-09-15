@@ -9,8 +9,9 @@
 import UIKit
 import CoreData
 
-struct CharacterService: CharacterServiceType {
+class CharacterService: CharacterServiceType {
     
+    var delegate: CharacterServiceDelegateProtocol?
     private let context: NSManagedObjectContext
     private let authenticationService: Authentication
     
@@ -25,23 +26,24 @@ struct CharacterService: CharacterServiceType {
         return calendar.startOfDay(for: date)
     }
     
-    func characters(for page: Int, handler: @escaping ([Character]) -> Void) throws {
+    func fetchCharacters(for page: Int) throws {
         let today = self.today()
         let request: NSFetchRequest<CharacterResult> = CharacterResult.fetchRequest()
         request.predicate = NSPredicate(format: " %K = %i ", #keyPath(CharacterResult.offset), page * pageSize)
         let result = try context.fetch(request)
         if result.count > 0 {
             if result.first!.fetchDate == today {
-                result.first!.characters == nil ? handler([]) : handler(Array(_immutableCocoaArray: result.first!.characters!))
+                result.first!.characters == nil ? delegate?.characters(fetchedCharacters: []) :
+                    delegate?.characters(fetchedCharacters: result.first!.characters!.allObjects as! [Character])
                 return
             } else {
                 context.delete(result.first!)
             }
         }
-        fetchCharacters(for: page, handler: handler)
+        fetchCharactersFromAPI(for: page)
     }
     
-    private func fetchCharacters(for page: Int, handler: @escaping ([Character]) -> Void) {
+    private func fetchCharactersFromAPI(for page: Int) {
         let ts = String(Date().timeIntervalSince1970)
         let hash = authenticationService.hashGenerator(ts: ts)
         guard let url = URL(string: "https://gateway.marvel.com/v1/public/characters?ts=\(ts)&apikey=\(authenticationService.publicKey)&hash=\(hash)&offset=\(page * pageSize)") else { fatalError() }
@@ -52,7 +54,7 @@ struct CharacterService: CharacterServiceType {
             do {
                 let result = try decoder.decode(CharacterResult.self, from: data)
                 if result.characters == nil {
-                    handler([])
+                    self.delegate?.characters(fetchedCharacters: [])
                 } else {
                     result.fetchDate = self.today()
                     try self.context.save()
@@ -60,10 +62,10 @@ struct CharacterService: CharacterServiceType {
                     result.characters?.forEach{
                         characterList.append($0 as! Character)
                     }
-                    handler(characterList)
+                    self.delegate?.characters(fetchedCharacters: characterList)
                 }
             } catch {
-                handler([])
+                self.delegate?.characters(fetchedCharacters: [])
             }
         }
         task.resume()

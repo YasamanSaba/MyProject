@@ -13,6 +13,7 @@
 		F27CE6002508A33800B402CE /* CharactersTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27CE5FF2508A33800B402CE /* CharactersTest.swift */; };
 		F27CE6032508A3E000B402CE /* InMemoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27CE6022508A3E000B402CE /* InMemoryStore.swift */; };
 		F27CE6092508A66000B402CE /* Comics.json in Resources */ = {isa = PBXBuildFile; fileRef = F27CE6082508A66000B402CE /* Comics.json */; };
+		F2883EAD2510940700B833F0 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2883EAC2510940700B833F0 /* ViewModel.swift */; };
 		F2951C162507990300B9EFE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2951C152507990300B9EFE3 /* AppDelegate.swift */; };
 		F2951C182507990300B9EFE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2951C172507990300B9EFE3 /* SceneDelegate.swift */; };
 		F2951C1A2507990300B9EFE3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2951C192507990300B9EFE3 /* ViewController.swift */; };
@@ -23,6 +24,8 @@
 		F2951C3B2507990B00B9EFE3 /* MylivnUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2951C3A2507990B00B9EFE3 /* MylivnUITests.swift */; };
 		F2951C5525079D9200B9EFE3 /* Character+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2951C5125079D9200B9EFE3 /* Character+CoreDataClass.swift */; };
 		F2951C5725079D9200B9EFE3 /* Comic+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2951C5325079D9200B9EFE3 /* Comic+CoreDataClass.swift */; };
+		F29A4F60250F519400B3E638 /* CharacterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A4F5F250F519400B3E638 /* CharacterCollectionViewCell.swift */; };
+		F29A4F62250F850C00B3E638 /* ComicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A4F61250F850C00B3E638 /* ComicCollectionViewCell.swift */; };
 		F2B218B0250DE8E8007CB48F /* ComicResult+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B218AE250DE8E8007CB48F /* ComicResult+CoreDataClass.swift */; };
 		F2B218B3250DED67007CB48F /* ComicsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B218B2250DED67007CB48F /* ComicsTest.swift */; };
 		F2B218B5250DF2A3007CB48F /* ComicServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B218B4250DF2A3007CB48F /* ComicServiceType.swift */; };
@@ -59,6 +62,7 @@
 		F27CE6022508A3E000B402CE /* InMemoryStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InMemoryStore.swift; sourceTree = "<group>"; };
 		F27CE6062508A63400B402CE /* Characters.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Characters.json; sourceTree = "<group>"; };
 		F27CE6082508A66000B402CE /* Comics.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Comics.json; sourceTree = "<group>"; };
+		F2883EAC2510940700B833F0 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		F2951C122507990300B9EFE3 /* Mylivn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mylivn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2951C152507990300B9EFE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2951C172507990300B9EFE3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +79,8 @@
 		F2951C3C2507990B00B9EFE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2951C5125079D9200B9EFE3 /* Character+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Character+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F2951C5325079D9200B9EFE3 /* Comic+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Comic+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F29A4F5F250F519400B3E638 /* CharacterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewCell.swift; sourceTree = "<group>"; };
+		F29A4F61250F850C00B3E638 /* ComicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicCollectionViewCell.swift; sourceTree = "<group>"; };
 		F2B218AE250DE8E8007CB48F /* ComicResult+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ComicResult+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F2B218B2250DED67007CB48F /* ComicsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsTest.swift; sourceTree = "<group>"; };
 		F2B218B4250DF2A3007CB48F /* ComicServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicServiceType.swift; sourceTree = "<group>"; };
@@ -120,6 +126,16 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		F260AE7C250F3DF200D054F8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F29A4F5E250F516000B3E638 /* Cell */,
+				F2951C1B2507990300B9EFE3 /* Main.storyboard */,
+				F2951C192507990300B9EFE3 /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		F27CE6012508A33E00B402CE /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +146,14 @@
 				F27CE6082508A66000B402CE /* Comics.json */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F2883EA9251093C200B833F0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F2883EAC2510940700B833F0 /* ViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		F2951C092507990300B9EFE3 = {
@@ -155,12 +179,12 @@
 		F2951C142507990300B9EFE3 /* Mylivn */ = {
 			isa = PBXGroup;
 			children = (
+				F2883EA9251093C200B833F0 /* ViewModel */,
+				F260AE7C250F3DF200D054F8 /* View */,
 				F2C919512508E30000B65FDE /* Service */,
 				F2951C4825079D0000B9EFE3 /* Model */,
 				F2951C152507990300B9EFE3 /* AppDelegate.swift */,
 				F2951C172507990300B9EFE3 /* SceneDelegate.swift */,
-				F2951C192507990300B9EFE3 /* ViewController.swift */,
-				F2951C1B2507990300B9EFE3 /* Main.storyboard */,
 				F2951C212507990A00B9EFE3 /* Assets.xcassets */,
 				F2951C232507990A00B9EFE3 /* LaunchScreen.storyboard */,
 				F2951C262507990A00B9EFE3 /* Info.plist */,
@@ -197,6 +221,15 @@
 				F2951C1E2507990300B9EFE3 /* Mylivn.xcdatamodeld */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F29A4F5E250F516000B3E638 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F29A4F5F250F519400B3E638 /* CharacterCollectionViewCell.swift */,
+				F29A4F61250F850C00B3E638 /* ComicCollectionViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		F2C919512508E30000B65FDE /* Service */ = {
@@ -350,10 +383,13 @@
 				F2951C162507990300B9EFE3 /* AppDelegate.swift in Sources */,
 				F25A8A5A250A00F400E28386 /* Authentication.swift in Sources */,
 				F2B218B7250DF2C5007CB48F /* ComicService.swift in Sources */,
+				F29A4F60250F519400B3E638 /* CharacterCollectionViewCell.swift in Sources */,
 				F2D4C5602508B4FF00899CDE /* CharacterResult+CoreDataClass.swift in Sources */,
 				F2951C202507990300B9EFE3 /* Mylivn.xcdatamodeld in Sources */,
 				F2B218B5250DF2A3007CB48F /* ComicServiceType.swift in Sources */,
 				F2C919532508E32400B65FDE /* CharacterServiceType.swift in Sources */,
+				F29A4F62250F850C00B3E638 /* ComicCollectionViewCell.swift in Sources */,
+				F2883EAD2510940700B833F0 /* ViewModel.swift in Sources */,
 				F2C919552508E34500B65FDE /* CharacterService.swift in Sources */,
 				F2951C182507990300B9EFE3 /* SceneDelegate.swift in Sources */,
 				F2951C5525079D9200B9EFE3 /* Character+CoreDataClass.swift in Sources */,

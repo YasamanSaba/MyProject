@@ -9,7 +9,9 @@
 import UIKit
 import CoreData
 
-struct ComicService: ComicServiceType {
+class ComicService: ComicServiceType {
+    var delegate: ComicServiceDelegateProtocol?
+    
     
     private let context: NSManagedObjectContext
     private let authenticationService: Authentication
@@ -25,27 +27,27 @@ struct ComicService: ComicServiceType {
         return calendar.startOfDay(for: date)
     }
     
-    func comics(characterId: Int,page: Int, handler: @escaping ([Comic]) -> Void) throws {
+    func fetchComics(characterId: Int,page: Int) throws {
         let today = self.today()
         let request: NSFetchRequest<Character> = Character.fetchRequest()
         request.predicate = NSPredicate(format: " %K == %i ", #keyPath(Character.id), characterId)
         let character = try context.fetch(request)
         if character.count != 1 {
-            handler([])
+            delegate?.comics(fetchedComics: [])
             return
         }
         if let comicResults = character.first!.comicResult  {
             let result = comicResults.map{$0 as! ComicResult }.filter{ $0.offset == page * pageSize}
             if result.count == 1, result.first!.fetchDate == today {
-                handler(Array( _immutableCocoaArray: result.first!.comics!))
+                delegate?.comics(fetchedComics: Array( _immutableCocoaArray: result.first!.comics!))
                 return
             } else {
-                fetchComics(characterId: characterId, page: page, handler: handler)
+                fetchComicsFromAPI(characterId: characterId, page: page)
             }
         }
     }
     
-    private func fetchComics(characterId: Int,page: Int, handler: @escaping ([Comic]) -> Void) {
+    private func fetchComicsFromAPI(characterId: Int, page: Int) {
         let ts = String(Date().timeIntervalSince1970)
         let hash = authenticationService.hashGenerator(ts: ts)
         guard let url = URL(string: "https://gateway.marvel.com/v1/public/characters/\(characterId)/comics?ts=\(ts)&apikey=\(authenticationService.publicKey)&hash=\(hash)&offset=\(page * pageSize)") else { fatalError() }
@@ -57,9 +59,9 @@ struct ComicService: ComicServiceType {
                 let result = try decoder.decode(ComicResult.self, from: data)
                 result.fetchDate = self.today()
                 try self.context.save()
-                handler(Array(_immutableCocoaArray: result.comics!))
+                self.delegate?.comics(fetchedComics: Array(_immutableCocoaArray: result.comics!))
             } catch {
-                handler([])
+                self.delegate?.comics(fetchedComics: [])
             }
         }
         task.resume()

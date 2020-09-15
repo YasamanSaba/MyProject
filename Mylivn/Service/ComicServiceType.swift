@@ -9,5 +9,10 @@
 import Foundation
 
 protocol ComicServiceType {
-    func comics(characterId: Int,page: Int, handler: @escaping ([Comic]) -> Void) throws
+    var delegate: ComicServiceDelegateProtocol? { get set }
+    mutating func fetchComics(characterId: Int,page: Int) throws
+}
+
+protocol ComicServiceDelegateProtocol {
+    mutating func comics(fetchedComics: [Comic])
 }

@@ -9,5 +9,10 @@
 import Foundation
 
 protocol CharacterServiceType {
-    func characters(for page: Int, handler: @escaping ([Character]) -> Void) throws
+    var delegate: CharacterServiceDelegateProtocol? { get set }
+    mutating func fetchCharacters(for page: Int) throws
+}
+
+protocol CharacterServiceDelegateProtocol {
+    mutating func characters(fetchedCharacters: [Character])
 }
