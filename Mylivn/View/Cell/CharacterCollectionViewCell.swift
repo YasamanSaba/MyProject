@@ -13,18 +13,13 @@ class CharacterCollectionViewCell: UICollectionViewCell {
     private var img: UIImageView!
     private var lblName: UILabel!
     
-    func configure(image: URL, name: String) {
+    func configure(item: Item) {
         img = UIImageView()
         img.layer.masksToBounds = true
         img.layer.cornerRadius = 5
-        URLSession.shared.dataTask(with: image) { [weak self] data, response, error in
-            guard let self = self, let response = response as? HTTPURLResponse, (200..<300).contains(response.statusCode), let data = data, let fetchedImage = UIImage(data: data) else { return }
-            DispatchQueue.main.async {
-                self.img.image = fetchedImage
-            }
-        }.resume()
+        img.image = item.image
         lblName = UILabel()
-        lblName.text = name
+        lblName.text = item.name
         lblName.font = UIFont.preferredFont(forTextStyle: .callout)
         lblName.adjustsFontSizeToFitWidth = true
         lblName.minimumScaleFactor = 0.5

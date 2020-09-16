@@ -13,10 +13,11 @@ class ViewModel {
     var characterService: CharacterServiceType
     typealias ComicDataSource = UICollectionViewDiffableDataSource<Int, Comic>
     var comicDataSource: ComicDataSource!
-    typealias CharacterDataSource = UICollectionViewDiffableDataSource<Int, Character>
+    typealias CharacterDataSource = UICollectionViewDiffableDataSource<Int, Item>
     var characterDataSource: CharacterDataSource!
     var comicArr: [Comic] = []
     var characterArr: [Character] = []
+    var items: [Item] = []
     var selectedCharacterIndex: Int = 0 {
         didSet {
             
@@ -25,8 +26,7 @@ class ViewModel {
     var lastCharacterPage = 0
     var characterCollectionView: UICollectionView?
     var comicCollectionView: UICollectionView?
-    
-    
+
     init(comicService: ComicServiceType, characterService: CharacterServiceType) {
         self.comicService = comicService
         self.characterService = characterService
@@ -54,26 +54,59 @@ extension ViewModel: CharacterServiceDelegateProtocol {
         if lastCharacterPage == 0, let collectionView = characterCollectionView {
             self.characterArr = fetchedCharacters
             self.characterDataSource = CharacterDataSource(collectionView: collectionView) {
-                (collectionView: UICollectionView, indexPath: IndexPath, character: Character) -> UICollectionViewCell? in
+                (collectionView: UICollectionView, indexPath: IndexPath, item: Item) -> UICollectionViewCell? in
                 guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CharacterCollectionViewCell.reuseId, for: indexPath) as? CharacterCollectionViewCell else { return nil }
-                cell.configure(image: character.img!, name: character.name!)
+                cell.configure(item: item)
+                if item.image == nil {
+                    URLSession(configuration: .default).dataTask(with: item.url) { data, response, error in
+                        DispatchQueue.main.async {
+                            guard let data = data, let response = response as? HTTPURLResponse, response.statusCode == 200 else { return }
+                            var updatedSnapshot = self.characterDataSource.snapshot()
+                            if let datasourceIndex = updatedSnapshot.indexOfItem(item) {
+                                let item = self.items[datasourceIndex]
+                                item.image = UIImage(data: data)
+                                updatedSnapshot.reloadItems([item])
+                                self.characterDataSource.apply(updatedSnapshot, animatingDifferences: true)
+                            }
+                        }
+                    }.resume()
+                }
                 return cell
             }
         } else {
             self.characterArr = self.characterArr + fetchedCharacters
         }
-        
-            var snapshot = NSDiffableDataSourceSnapshot<Int, Character>()
-            snapshot.appendSections([0])
-            snapshot.appendItems(self.characterArr, toSection: 0)
-            self.characterDataSource.apply(snapshot)
-        
-        
+        self.items = self.characterArr.map { Item(name: $0.name!,url: $0.img!, image: nil) }
+        var snapshot = NSDiffableDataSourceSnapshot<Int, Item>()
+        snapshot.appendSections([0])
+        snapshot.appendItems(self.items, toSection: 0)
+        self.characterDataSource.apply(snapshot)
     }
 }
 
 extension ViewModel: ComicServiceDelegateProtocol {
     func comics(fetchedComics: [Comic]) {
         
+    }
+}
+
+class Item: Hashable {
+    
+    static func == (lhs: Item, rhs: Item) -> Bool {
+        lhs === rhs
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(name)
+    }
+    
+    var name: String
+    var url: URL
+    var image: UIImage?
+    
+    init(name: String,url: URL, image: UIImage?) {
+        self.name = name
+        self.url = url
+        self.image = image
     }
 }
