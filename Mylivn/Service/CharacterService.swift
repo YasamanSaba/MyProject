@@ -54,7 +54,9 @@ class CharacterService: CharacterServiceType {
             do {
                 let result = try decoder.decode(CharacterResult.self, from: data)
                 if result.characters == nil {
-                    self.delegate?.characters(fetchedCharacters: [])
+                    DispatchQueue.main.async {
+                        self.delegate?.characters(fetchedCharacters: [])
+                    }
                 } else {
                     result.fetchDate = self.today()
                     try self.context.save()
@@ -62,10 +64,14 @@ class CharacterService: CharacterServiceType {
                     result.characters?.forEach{
                         characterList.append($0 as! Character)
                     }
-                    self.delegate?.characters(fetchedCharacters: characterList)
+                    DispatchQueue.main.async {
+                        self.delegate?.characters(fetchedCharacters: characterList)
+                    }
                 }
             } catch {
-                self.delegate?.characters(fetchedCharacters: [])
+                DispatchQueue.main.async {
+                    self.delegate?.characters(fetchedCharacters: [])
+                }
             }
         }
         task.resume()
