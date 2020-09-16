@@ -58,16 +58,13 @@ extension ViewModel: CharacterServiceDelegateProtocol {
                 guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CharacterCollectionViewCell.reuseId, for: indexPath) as? CharacterCollectionViewCell else { return nil }
                 cell.configure(item: item)
                 if item.image == nil {
-                    URLSession(configuration: .default).dataTask(with: item.url) { data, response, error in
+                    URLSession.shared.dataTask(with: item.url) { data, response, error in
                         DispatchQueue.main.async {
-                            guard let data = data, let response = response as? HTTPURLResponse, response.statusCode == 200 else { return }
+                            guard let data = data, let response = response as? HTTPURLResponse, response.statusCode == 200, error == nil else { return }
                             var updatedSnapshot = self.characterDataSource.snapshot()
-                            if let datasourceIndex = updatedSnapshot.indexOfItem(item) {
-                                let item = self.items[datasourceIndex]
-                                item.image = UIImage(data: data)
-                                updatedSnapshot.reloadItems([item])
-                                self.characterDataSource.apply(updatedSnapshot, animatingDifferences: true)
-                            }
+                            item.image = UIImage(data: data)
+                            updatedSnapshot.reloadItems([item])
+                            self.characterDataSource.apply(updatedSnapshot, animatingDifferences: true)
                         }
                     }.resume()
                 }
