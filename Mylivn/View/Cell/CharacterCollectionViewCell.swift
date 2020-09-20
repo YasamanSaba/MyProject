@@ -17,6 +17,8 @@ class CharacterCollectionViewCell: UICollectionViewCell {
         img = UIImageView()
         img.layer.masksToBounds = true
         img.layer.cornerRadius = 5
+        img.layer.borderColor = UIColor.systemGray3.cgColor
+        img.layer.borderWidth = 1
         img.image = item.image
         lblName = UILabel()
         lblName.text = item.name
