@@ -13,7 +13,7 @@ class CharacterCollectionViewCell: UICollectionViewCell {
     private var img: UIImageView!
     private var lblName: UILabel!
     
-    func configure(item: Item) {
+    func configure(item: CharacterItem) {
         img = UIImageView()
         img.layer.masksToBounds = true
         img.layer.cornerRadius = 5

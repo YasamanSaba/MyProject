@@ -14,15 +14,15 @@ class ComicCollectionViewCell: UICollectionViewCell {
     var desc: UILabel!
     var title: UILabel!
     
-    func configuration(image: UIImage, des: String, header: String) {
+    func configuration(item: ComicItem) {
         img = UIImageView()
-        img.image = image
+        img.image = item.img
         desc = UILabel()
-        desc.text = des
+        desc.text = item.desc
         desc.numberOfLines = 0
         desc.font = UIFont.preferredFont(forTextStyle: .caption1)
         title = UILabel()
-        title.text = header
+        title.text = item.title
         title.font = UIFont.preferredFont(forTextStyle: .callout)
         contentView.addSubview(img)
         contentView.addSubview(title)
@@ -44,5 +44,12 @@ class ComicCollectionViewCell: UICollectionViewCell {
             desc.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -5),
             desc.bottomAnchor.constraint(equalTo: img.bottomAnchor)
         ])
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        img.image = nil
+        desc.text = nil
+        title.text = nil
     }
 }

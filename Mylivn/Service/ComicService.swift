@@ -39,7 +39,7 @@ class ComicService: ComicServiceType {
         if let comicResults = character.first!.comicResult  {
             let result = comicResults.map{$0 as! ComicResult }.filter{ $0.offset == page * pageSize}
             if result.count == 1, result.first!.fetchDate == today {
-                delegate?.comics(fetchedComics: Array( _immutableCocoaArray: result.first!.comics!))
+                delegate?.comics(fetchedComics:  result.first!.comics!.allObjects as! [Comic])
                 return
             } else {
                 fetchComicsFromAPI(characterId: characterId, page: page)
@@ -59,9 +59,13 @@ class ComicService: ComicServiceType {
                 let result = try decoder.decode(ComicResult.self, from: data)
                 result.fetchDate = self.today()
                 try self.context.save()
-                self.delegate?.comics(fetchedComics: Array(_immutableCocoaArray: result.comics!))
+                DispatchQueue.main.async {
+                    self.delegate?.comics(fetchedComics: result.comics!.allObjects as! [Comic])
+                }
             } catch {
-                self.delegate?.comics(fetchedComics: [])
+                DispatchQueue.main.async {
+                    self.delegate?.comics(fetchedComics: [])
+                }
             }
         }
         task.resume()

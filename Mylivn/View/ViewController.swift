@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     func setup() {
         self.characterCollectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: configureCharacterLayout())
         self.comicCollectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: configureComicLayout())
-        comicCollectionView.dataSource = self
+        
         characterCollectionView.register(CharacterCollectionViewCell.self, forCellWithReuseIdentifier: CharacterCollectionViewCell.reuseId)
         comicCollectionView.register(ComicCollectionViewCell.self, forCellWithReuseIdentifier: ComicCollectionViewCell.reuseId)
         characterCollectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -45,6 +45,7 @@ class ViewController: UIViewController {
             comicCollectionView.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 5/6)
         ])
         viewModel.start(characterCollectionView: characterCollectionView, comicCollectionView: comicCollectionView)
+        characterCollectionView.delegate = self
     }
     
     func configureCharacterLayout() -> UICollectionViewCompositionalLayout {
@@ -72,17 +73,8 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        8
+extension ViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.viewModel.select(character: indexPath)
     }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ComicCollectionViewCell.reuseId, for: indexPath) as? ComicCollectionViewCell else { fatalError() }
-        let img = UIImage(named: "image_not_available")!
-        cell.configuration(image: img, des: "The fates of The Initiative, the United States, and Planet Earth hang in the balance. Plus: Former Avenger, Delroy Garret, assumes the mantle and arsenal of Earth's greatest Skrull-Hunter, The 3-D Man.", header: "Avengers: The Initiative (2007) #14")
-        return cell
-    }
-    
-    
 }
