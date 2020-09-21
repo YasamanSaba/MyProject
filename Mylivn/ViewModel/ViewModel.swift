@@ -59,9 +59,9 @@ extension ViewModel: CharacterServiceDelegateProtocol {
                 guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CharacterCollectionViewCell.reuseId, for: indexPath) as? CharacterCollectionViewCell else { return nil }
                 cell.configure(item: item)
                 if item.image == nil {
-                    URLSession.shared.dataTask(with: item.url) { data, response, error in
+                    URLSession.shared.dataTask(with: item.url) { [weak self] data, response, error in
                         DispatchQueue.main.async {
-                            guard let data = data, let response = response as? HTTPURLResponse, response.statusCode == 200, error == nil else { return }
+                            guard let self = self, let data = data, let response = response as? HTTPURLResponse, response.statusCode == 200, error == nil, self.selectedCharacterIndex < self.characters.count, self.characters[self.selectedCharacterIndex].id == item.id else { return }
                             var updatedSnapshot = self.characterDataSource.snapshot()
                             item.image = UIImage(data: data)
                             updatedSnapshot.reloadItems([item])
@@ -74,7 +74,7 @@ extension ViewModel: CharacterServiceDelegateProtocol {
         } else {
             self.characters = self.characters + fetchedCharacters
         }
-        self.characterItems = self.characters.map { CharacterItem(name: $0.name!,url: $0.img!, image: nil) }
+        self.characterItems = self.characters.map { CharacterItem(id: $0.id ,name: $0.name!,url: $0.img!, image: nil) }
         var snapshot = NSDiffableDataSourceSnapshot<Int, CharacterItem>()
         snapshot.appendSections([0])
         snapshot.appendItems(self.characterItems, toSection: 0)
@@ -123,17 +123,19 @@ class CharacterItem: Hashable {
     }
     
     func hash(into hasher: inout Hasher) {
-        hasher.combine(name)
+        hasher.combine(id)
     }
     
     var name: String
     var url: URL
     var image: UIImage?
+    let id: Int64
     
-    init(name: String,url: URL, image: UIImage?) {
+    init(id: Int64, name: String,url: URL, image: UIImage?) {
         self.name = name
         self.url = url
         self.image = image
+        self.id = id
     }
 }
 
